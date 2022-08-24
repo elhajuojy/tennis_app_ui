@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -5,9 +6,15 @@ import 'package:get/get.dart';
 import '../core/color.dart';
 
 class CustomActionButton extends StatelessWidget {
-  const CustomActionButton({
-    Key? key,
-  }) : super(key: key);
+  CustomActionButton(
+      {Key? key,
+      required this.boxIcon,
+      this.backgroundColor = Colors.white,
+      this.iconColor = Colors.black})
+      : super(key: key);
+  final IconData boxIcon;
+  Color? backgroundColor;
+  Color? iconColor;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +25,7 @@ class CustomActionButton extends StatelessWidget {
       child: Container(
         width: Get.width * 0.13,
         decoration: BoxDecoration(
-            color: Colors.white,
+            color: backgroundColor,
             border: Border.all(
               width: 2,
               color: const Color.fromARGB(255, 240, 237, 237),
@@ -27,8 +34,8 @@ class CustomActionButton extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Icon(
-            FontAwesomeIcons.chevronLeft,
-            color: AppColor.SecondDarkColor,
+            boxIcon,
+            color: iconColor,
           ),
         ),
       ),
