@@ -1,4 +1,4 @@
-# flutter ui teenis app 
+# flutter ui tennis app 
 
 ## Development Setup
 Clone the repository and run the following commands:
