@@ -1,0 +1,5 @@
+{
+    "cmake.sourceDirectory": "${workspaceFolder}/linux",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures":true
+}
