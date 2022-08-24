@@ -26,9 +26,9 @@ class TrainScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: Get.height * 0.04),
-            const Padding(
+            Padding(
               padding: EdgeInsets.all(30.0),
-              child: CustomActionButton(),
+              child: CustomActionButton(boxIcon: FontAwesomeIcons.chevronLeft),
             ),
             SizedBox(height: Get.height * 0.42),
             Container(
